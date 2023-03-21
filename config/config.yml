@@ -1,0 +1,11 @@
+Server:
+    Name: golang-example
+    Port: 3000
+
+Database:
+    ServerType: postgres
+    DriverSource: host=localhost port=5432 user=root password=secret dbname=Go_Example sslmode=disable
+    MaxOpenConns: 5
+    MaxIdleConns: 5
+    ConnMaxLifetime: 30
+    ConnMaxIdleTime: 30

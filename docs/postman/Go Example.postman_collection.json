@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "7ccb52e9-03fa-4fb0-96da-9860c2e2760c",
+		"name": "Go Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25960139"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Create Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Mencari Dia Di Cafe Telkom\",\n    \"synopsis\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae congue lorem. Vivamus id pellentesque lectus. Donec egestas pretium risus a dapibus. Proin sit amet.\",\n    \"cover_url\": \"https://upload.wikimedia.org/wikipedia/id/thumb/6/60/Ada_Apa_Denga_Cinta_2.jpg/220px-Ada_Apa_Denga_Cinta_2.jpg\",\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum dignissim nulla, vitae placerat sem tempor nec. In hendrerit dapibus massa, sed consequat risus cursus dignissim. Vivamus nulla eros, accumsan quis tristique sit amet, mattis eget arcu. Pellentesque vitae lacus libero. Mauris luctus dolor purus, sit amet blandit diam euismod eu. Aenean ultrices maximus eleifend. Fusce eget tempus nisl. Etiam fringilla ipsum sit amet ullamcorper mattis. Donec ut augue metus. Nulla pellentesque metus vitae feugiat feugiat. Donec vitae lobortis risus, eget accumsan odio. Nullam placerat ac arcu gravida dictum. Maecenas vel sodales massa. Sed eros felis, tincidunt quis fringilla eu, dictum vitae dui.\",\n    \"author_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiv1}}/books",
+							"host": [
+								"{{apiv1}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiv1}}/books/1",
+							"host": [
+								"{{apiv1}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiv1}}/books?filterAuthorID=4&search=Menca&page=1&pageSize=10&orderBy=created_at&orderType=DESC",
+							"host": [
+								"{{apiv1}}"
+							],
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "filterAuthorID",
+									"value": "4",
+									"description": "bisa di nonaktifkan"
+								},
+								{
+									"key": "search",
+									"value": "Menca",
+									"description": "bisa di nonaktifkan"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "orderBy",
+									"value": "created_at"
+								},
+								{
+									"key": "orderType",
+									"value": "DESC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n     \"title\": \"Mencari Dia Di Cafe Telkom\",\n    \"synopsis\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae congue lorem. Vivamus id pellentesque lectus. Donec egestas pretium risus a dapibus. Proin sit amet.\",\n    \"cover_url\": \"https://upload.wikimedia.org/wikipedia/id/thumb/6/60/Ada_Apa_Denga_Cinta_2.jpg/220px-Ada_Apa_Denga_Cinta_2.jpg\",\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum dignissim nulla, vitae placerat sem tempor nec. In hendrerit dapibus massa, sed consequat risus cursus dignissim. Vivamus nulla eros, accumsan quis tristique sit amet, mattis eget arcu. Pellentesque vitae lacus libero. Mauris luctus dolor purus, sit amet blandit diam euismod eu. Aenean ultrices maximus eleifend. Fusce eget tempus nisl. Etiam fringilla ipsum sit amet ullamcorper mattis. Donec ut augue metus. Nulla pellentesque metus vitae feugiat feugiat. Donec vitae lobortis risus, eget accumsan odio. Nullam placerat ac arcu gravida dictum. Maecenas vel sodales massa. Sed eros felis, tincidunt quis fringilla eu, dictum vitae dui.\",\n    \"author_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiv1}}/books",
+							"host": [
+								"{{apiv1}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiv1}}/books/1",
+							"host": [
+								"{{apiv1}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "Create Author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"full_name\": \"balmon gunawan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiv1}}/authors",
+							"host": [
+								"{{apiv1}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Author By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiv1}}/authors/1",
+							"host": [
+								"{{apiv1}}"
+							],
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiv1}}/authors",
+							"host": [
+								"{{apiv1}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Author",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"full_name\": \"Argus Paijo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiv1}}/authors",
+							"host": [
+								"{{apiv1}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiv1}}/authors/1",
+							"host": [
+								"{{apiv1}}"
+							],
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiv1",
+			"value": "localhost:3000/api/v1",
+			"type": "string"
+		}
+	]
+}
