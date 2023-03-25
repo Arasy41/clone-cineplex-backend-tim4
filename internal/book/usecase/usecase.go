@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/nsrvel/golang-example/config"
+	"github.com/nsrvel/golang-example/cmd/api/config"
 	authorRepo "github.com/nsrvel/golang-example/internal/author/repository"
 	"github.com/nsrvel/golang-example/internal/book/repository"
 	"github.com/nsrvel/golang-example/internal/models"

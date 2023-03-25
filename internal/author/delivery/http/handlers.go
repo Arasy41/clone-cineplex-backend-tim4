@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/nsrvel/golang-example/config"
+	"github.com/nsrvel/golang-example/cmd/api/config"
 	"github.com/nsrvel/golang-example/internal/author/usecase"
 	"github.com/nsrvel/golang-example/internal/models"
 	"github.com/nsrvel/golang-example/pkg/utils"

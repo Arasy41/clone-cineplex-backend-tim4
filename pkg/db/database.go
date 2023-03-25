@@ -7,7 +7,7 @@ import (
 
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
-	"github.com/nsrvel/golang-example/config"
+	"github.com/nsrvel/golang-example/cmd/api/config"
 )
 
 func NewDBConnection(cfg *config.DatabaseAccount) *sqlx.DB {

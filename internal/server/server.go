@@ -7,7 +7,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/jmoiron/sqlx"
-	"github.com/nsrvel/golang-example/config"
+	"github.com/nsrvel/golang-example/cmd/api/config"
 	"github.com/nsrvel/golang-example/internal/author"
 	"github.com/nsrvel/golang-example/internal/book"
 	"github.com/nsrvel/golang-example/pkg/utils"

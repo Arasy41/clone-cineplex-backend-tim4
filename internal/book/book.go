@@ -3,7 +3,7 @@ package book
 import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/jmoiron/sqlx"
-	"github.com/nsrvel/golang-example/config"
+	"github.com/nsrvel/golang-example/cmd/api/config"
 	authorRepo "github.com/nsrvel/golang-example/internal/author/repository"
 	"github.com/nsrvel/golang-example/internal/book/delivery/http"
 	"github.com/nsrvel/golang-example/internal/book/repository"

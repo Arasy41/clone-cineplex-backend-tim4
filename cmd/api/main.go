@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/nsrvel/golang-example/config"
+	"github.com/nsrvel/golang-example/cmd/api/config"
 	"github.com/nsrvel/golang-example/internal/server"
 	"github.com/nsrvel/golang-example/pkg/db"
 )
